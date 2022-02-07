@@ -12,7 +12,7 @@ echo root:password | chpasswd
 
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
-pacman -S grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools linux-zen-headers avahi xdg-user-dirs xgd-utils gvfs gvfs-smb nfs-utils inetutils dnsutils alsa-utils pulseaudio bash-completion openssh rsync ntfs-3g xorg sddm openbox lofi polybar nautilus gnome-terminal firefox xf86-video-amdgpu 
+pacman -S grub efibootmgr networkmanager network-manager-applet dialog mpd ncmpcpp zsh plank dunst alacritty geany gedit light neofetch  wpa_supplicant mtools dosfstools linux-zen-headers avahi xdg-user-dirs xgd-utils gvfs gvfs-smb nfs-utils inetutils dnsutils alsa-utils pulseaudio bash-completion openssh rsync ntfs-3g xorg sddm openbox lofi polybar nautilus gnome-terminal firefox xf86-video-amdgpu 
 
 
 #AUR pkgs
@@ -25,7 +25,7 @@ makepkg -si
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
-paru -Sy timeshift timeshift-autosnap zram
+paru -Sy timeshift timeshift-autosnap zram pamac 
 systemctl enable NetworkManager
 #systemctl enable sshd
 # You can comment this command out if you didn't install tlp, see above
