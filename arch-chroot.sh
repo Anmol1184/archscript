@@ -16,7 +16,7 @@ pacman -S grub efibootmgr networkmanager network-manager-applet dialog wpa_suppl
 pacman -S dmenu lxappearance nitrogen picom menumaker grub-btrfs
 
 #AUR pkgs
-timeshift timeshift-autosnap zram 
+#timeshift timeshift-autosnap zram 
 
 #pacman -S  --noconfirm xf86-video-amdgpu
 #pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
