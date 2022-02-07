@@ -2,7 +2,7 @@
 mkfs.fat -F32 /dev/sda1
 #mkswap /dev/sda2
 #swapon /dev/sda2
-mkfs.btrfs /dev/sda2
+mkfs.btrfs -f /dev/sda2
 mount /dev/sda2 /mnt
 btrfs su cr /mnt/@
 btrfs su cr /mnt/@home
