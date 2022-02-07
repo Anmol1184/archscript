@@ -14,7 +14,7 @@ umount /mnt
 
 mount -o noatime,space_cache=v2,ssd,compress=zstd,discard=async,subvol=@ /dev/sda2 /mnt
 # You need to manually create folder to mount the other subvolumes at
-mkdir /mnt/{boot/efi,home,var,opt,tmp,.snapshots}
+mkdir /mnt/{boot/efi,home,var,opt,tmp,snapshots}
 
 mount -o noatime,space_cache=v2,ssd,compress=zstd,discard=async,subvol=@home /dev/sda2 /mnt/home
 
@@ -22,7 +22,7 @@ mount -o noatime,space_cache=v2,ssd,compress=zstd,subvol=@opt /dev/sda2 /mnt/opt
 
 mount -o noatime,space_cache=v2,ssd,compress=zstd,subvol=@tmp /dev/sda2 /mnt/tmp
 
-mount -o noatime,space_cache=v2,ssd,compress=zstd,subvol=@.snapshots /dev/sda2 /mnt/.snapshots
+mount -o noatime,space_cache=v2,ssd,compress=zstd,subvol=@.snapshots /dev/sda2 /mnt/snapshots
 
 mount -o noatime,space_cache=v2,ssd,compress=zstd,subvol=@var /dev/sda2 /mnt/var
 
