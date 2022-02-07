@@ -30,7 +30,7 @@ mount -o noatime,space_cache=v2,ssd,compress=zstd,subvol=@var /dev/sda2 /mnt/var
 mkdir /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
 
-pacstrap /mnt base linux-zen linux-firmware nano amd-ucode btrfs-progs
+pacstrap /mnt base linux-zen linux-firmware nano amd-ucode btrfs-progs git
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
