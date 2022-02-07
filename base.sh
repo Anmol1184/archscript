@@ -14,7 +14,7 @@ umount /mnt
 
 mount -o noatime,space_cache=v2,ssd,compress=zstd,discard=async,subvol=@ /dev/sda2 /mnt
 # You need to manually create folder to mount the other subvolumes at
-mkdir /mnt/{boot/efi,home,var,opt,tmp,snapshots}
+mkdir /mnt/{home,var,opt,tmp,snapshots}
 
 mount -o noatime,space_cache=v2,ssd,compress=zstd,discard=async,subvol=@home /dev/sda2 /mnt/home
 
@@ -27,6 +27,7 @@ mount -o noatime,space_cache=v2,ssd,compress=zstd,subvol=@.snapshots /dev/sda2 /
 mount -o noatime,space_cache=v2,ssd,compress=zstd,subvol=@var /dev/sda2 /mnt/var
 
 # Mounting the boot partition at /boot folder
+mkdir /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
 
 pacstrap /mnt base linux-zen linux-firmware nano amd-ucode btrfs-progs
